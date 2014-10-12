@@ -10,7 +10,7 @@ data <- data[data$Date >= "2007-02-01" & data$Date <= "2007-02-02",]
 #MCombine Date and Time column
 data$DateTime <- strptime(paste(data$Date, data$Time), "%Y-%m-%d %H:%M:%S") 
 
-#create plot1.png file
+#create plot2.png file
 png(filename = "plot2.png") 
 plot(x = data$DateTime, y = data$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)") 
 dev.off() 
